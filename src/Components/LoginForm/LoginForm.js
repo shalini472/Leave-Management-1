@@ -6,7 +6,7 @@ import './LoginForm.css';
 import Validator from '../Utils/Validator';
 const styles = {
     root: {
-        width:'84%',
+        width:'83%',
     },
     button:{
         backgroundColor:"black",
@@ -79,7 +79,6 @@ class LoginForm extends Component {
              method:"POST",
              headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
               },
              body:JSON.stringify(this.state.onSubmitValues)
          }).then(response=>response.json()).then(data=>{
@@ -99,10 +98,7 @@ class LoginForm extends Component {
             }
          })
         }}
-        //  if(response.ok===true){
-        //      debugger
-        //     this.props.history.push("/admin")
-        //  }
+       
     render() { 
         const {classes}=this.props;
         const {responseMessage,errorMessage}=this.state;
